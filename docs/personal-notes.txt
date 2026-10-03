@@ -1,35 +1,43 @@
 PHIẾU CÁ NHÂN — DAY 14
-Annotation nộp bằng Save/completed trên CVAT. Coach thu/review riêng.
+Điền file này, chạy QC vào submission/qc-j01 và submission/qc-practice, commit rồi nộp link repo.
+Không dán ảnh, toạ độ điểm hay nội dung file export vào đây.
 
-Packet / slot / case / lượt:
-Task / job:
-Track CVAT / object được giao:
-Phạm vi local frame / source frame:
-Guideline / profile calibration đã đọc:
+Họ tên / mã học viên: Hà Quang Huy - 2A202602263
+Packet / slot / case / lượt: Chưa có thông tin từ Coach
+Task / job: Task 31 (Day14 HaQuangHuy) trên CVAT local
+Track CVAT / object được giao: Cả hai — Track 0 (frames 0-65) và Track 1 (frames 0-44)
+Phạm vi local frame / source frame: Frame 0-65 (66 frame).
+Guideline / profile calibration đã đọc: docs/lab.md, docs/huong-dan-hinh.md
 
-Frame fit và lý do:
-L / W / H (m):
+Frame fit và lý do: Frames 12-20 dùng để tham chiếu fit cuboid
+L / W / H (m): Track 0: 4.19 x 2.16 x 1.73; Track 1: 4.19 x 2.16 x 1.73
 Keyframe quan trọng và lý do:
-Frame nội suy đã kiểm:
+  - Track 0: keyframes tại frames 1-61, 63-65 (frame 62 là nội suy)
+  - Track 1: keyframes tại frames 1-44 (mỗi frame đều là keyframe)
+Frame nội suy đã kiểm: Frame 62 của Track 0 (nội suy giữa frame 61 và 63)
 Đoạn thưa / che khuất / dễ nhầm identity:
+  - Track 0: từ frame 44 trở đi ở ngoài tầm nhìn, còn rất ít points
+  - Track 1: frames 1-44, sau đó kết thúc
 
 Phát hiện temporal và frame/evidence:
-Quyết định độc lập trước review:
-Phản hồi nhận được:
-Hành động sau review và lý do:
+  - Track 0: kết thúc tại frame 65 (xe này giữ khoảng cách và vận tốc so với body khá tốt nên hầu hết có thể để nội suy nhưng mà vẫn lệch một tí nên manually kéo một tí, chỉ có frame 62 là không đụng luôn)
+  - Track 1: kết thúc tại frame 44
+Quyết định độc lập trước review: quyết định track 1 kết thúc tại frame 44 do ngoài tầm và ít cloudpoint
+Phản hồi nhận được: Chưa có
+Hành động sau review và lý do: Chưa có
 
-Ca bình thường Camera–LiDAR (frame/camera/quan sát):
-Ca khó (frame/camera/quan sát 2D, 3D):
-Giả thuyết nguyên nhân / giới hạn kết luận:
-Hành động sửa / giữ / escalation và người nhận:
+Ca bình thường Camera–LiDAR (frame/camera/quan sát): Chưa có
+Ca khó (frame/camera/quan sát 2D, 3D): Chưa có
+Giả thuyết nguyên nhân / giới hạn kết luận: Chưa có
+Hành động sửa / giữ / escalation và người nhận: Chưa có
 
-Đã Save và mở lại kiểm:
-Trạng thái job cuối / blocker:
+Đã Save và mở lại kiểm: Chưa có
+Trạng thái job cuối / blocker: Chưa có
 
 TỔNG KẾT BỘ JOB
-Job đã bắt đầu:
-Job đã Save/completed:
-Job chưa bắt đầu:
-Job còn cần rework / blocker:
-Mẫu peer check và phản hồi:
-Thời gian làm J01 / mini-job / self-QC:
+Job đã bắt đầu: Chưa có
+Job đã Save/completed: Chưa có
+Job chưa bắt đầu: Chưa có
+Job còn cần rework / blocker: Chưa có
+Mẫu peer check và phản hồi: Chưa có
+Thời gian làm J01 / mini-job / self-QC: Chưa có
