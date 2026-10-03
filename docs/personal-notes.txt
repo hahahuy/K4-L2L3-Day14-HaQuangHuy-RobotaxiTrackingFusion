@@ -28,16 +28,16 @@ Hành động sau review và lý do: Dùng script nhỏ lấy annotate box từ 
 
 Ca bình thường Camera–LiDAR (frame/camera/quan sát): Các xe GreenSM vì màu xe dễ thấy, phong cảnh từ frame 0 tới 65 gồm hai chiếc tách biệt và đứng xa nên dễ đánh
 Ca khó (frame/camera/quan sát 2D, 3D): None
-Giả thuyết nguyên nhân / giới hạn kết luận: Chưa có
-Hành động sửa / giữ / escalation và người nhận: Chưa có
+Giả thuyết nguyên nhân / giới hạn kết luận: Track 1 dừng ở frame 44 vì xe ra khỏi tầm nhìn LiDAR và còn rất ít cloudpoint, không phải lỗi annotation. Giới hạn: chưa đối chiếu overlay camera cho sequence thật trong buổi này, kết luận dựa trên point cloud và ảnh context trong CVAT.
+Hành động sửa / giữ / escalation và người nhận: Giữ kích thước tham chiếu 4.19 x 2.16 x 1.73 cho toàn track, chỉ sửa ở frame 0 cho khớp identity; không escalate.
 
-Đã Save và mở lại kiểm: Chưa có
-Trạng thái job cuối / blocker: Chưa có
+Đã Save và mở lại kiểm: Đã, xác nhận cuboid và keyframe còn nguyên sau khi reload
+Trạng thái job cuối / blocker: Task 31 job 48 frames 0-65, trạng thái in progress — chưa chuyển completed. Task 32 job 49 dùng để verify bản fix frame 0. Blocker: CVAT của Coach đã shutdown nên phải tự dựng local và gửi bản annotate lên Drive của Coach.
 
 TỔNG KẾT BỘ JOB
-Job đã bắt đầu: Chưa có
-Job đã Save/completed: Chưa có
-Job chưa bắt đầu: Chưa có
-Job còn cần rework / blocker: Chưa có
+Job đã bắt đầu: Job 48 (task 31, frames 0-65), job 49 (task 32, verify frame 0)
+Job đã Save/completed: Job 48 đã Save; job 49 đã upload annotation để verify
+Job chưa bắt đầu: Các job còn lại trong ngân hàng 20 job — không bắt đầu, không tính là lỗi annotation
+Job còn cần rework / blocker: Job 48 cần chuyển completed sau khi Coach xác nhận; blocker là CVAT Coach đã shutdown
 Mẫu peer check và phản hồi: Không thực hiện
 Thời gian làm J01 / mini-job / self-QC: 15 phút cho cả track 0 và track 1
