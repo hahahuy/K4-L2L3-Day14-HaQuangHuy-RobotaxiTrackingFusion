@@ -23,11 +23,11 @@ Phát hiện temporal và frame/evidence:
   - Track 0: kết thúc tại frame 65 (xe này giữ khoảng cách và vận tốc so với body khá tốt nên hầu hết có thể để nội suy nhưng mà vẫn lệch một tí nên manually kéo một tí, chỉ có frame 62 là không đụng luôn)
   - Track 1: kết thúc tại frame 44
 Quyết định độc lập trước review: quyết định track 1 kết thúc tại frame 44 do ngoài tầm và ít cloudpoint
-Phản hồi nhận được: Chưa có
-Hành động sau review và lý do: Chưa có
+Phản hồi nhận được: Track bị lỡ quên frame 0, thực tế track bắt đầu từ frame 1 tới 65
+Hành động sau review và lý do: Dùng script nhỏ lấy annotate box từ frame 1 rồi gán sang frame 0, đẩy lùi điểm bắt đầu track xuống frame 0. Đã verify lại bằng task mới trên CVAT local.
 
-Ca bình thường Camera–LiDAR (frame/camera/quan sát): Chưa có
-Ca khó (frame/camera/quan sát 2D, 3D): Chưa có
+Ca bình thường Camera–LiDAR (frame/camera/quan sát): Các xe GreenSM vì màu xe dễ thấy, phong cảnh từ frame 0 tới 65 gồm hai chiếc tách biệt và đứng xa nên dễ đánh
+Ca khó (frame/camera/quan sát 2D, 3D): None
 Giả thuyết nguyên nhân / giới hạn kết luận: Chưa có
 Hành động sửa / giữ / escalation và người nhận: Chưa có
 
@@ -39,5 +39,5 @@ Job đã bắt đầu: Chưa có
 Job đã Save/completed: Chưa có
 Job chưa bắt đầu: Chưa có
 Job còn cần rework / blocker: Chưa có
-Mẫu peer check và phản hồi: Chưa có
-Thời gian làm J01 / mini-job / self-QC: Chưa có
+Mẫu peer check và phản hồi: Không thực hiện
+Thời gian làm J01 / mini-job / self-QC: 15 phút cho cả track 0 và track 1
